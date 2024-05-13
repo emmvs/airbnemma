@@ -1,0 +1,15 @@
+<!-- TODO: Show a list of each of the flats -->
+<div class="container">
+  <h1>Flats</h1>
+  <p>this is your flats page</p>
+<!-- TODO: by using the @flats (which consists of an array of hashes) -->
+    <% @flats.each do |flat|  %>
+      <div class="card bg-light p-4 m-3" style="width: 18rem;">
+        <img src="<%= flat["imageUrl"] %>" alt="<%= flat["name"]  %>">
+        <div class="card-body">
+          <h3><%= flat["name"] %></h3>
+          <p class="card-text"><%= flat["price"] %> <%= flat["priceCurrency"] %></p>
+        </div>
+      </div>
+    <% end %> 
+</div>
